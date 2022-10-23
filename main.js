@@ -90,7 +90,6 @@ async function main(args) {
     })());
   }
   const bestParams = await Promise.all(getBestRecordPromises);
-  console.log(`bestParams = ${JSON.stringify(bestParams)}`);
 
   // read sample *.set file
   const setFileTemplate = await fsp.readFile('template.set', 'utf16le');
@@ -131,6 +130,7 @@ async function main(args) {
   for (const bestParam of bestParams) {
     xmlObject.queued.backtest.push({
       eaName: EA_NAME,
+      symbol: bestParam.name,
       InputSetFile: folderPath + '\\' + bestParam.name + '.set',
       backtestResultFolder: BACKTEST_RESULT_FOLDER,
       forwardtestResultFolder: FORWARDTEST_RESULT_FOLDER,
