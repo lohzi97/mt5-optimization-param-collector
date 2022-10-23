@@ -1,0 +1,8 @@
+[
+  "BalanceOfPower_SmoothingPeriod",
+  "Ichimoku_Tenkansen",
+  "Ichimoku_Kijunsen",
+  "TripleJurikSmooth_Period",
+  "PriceAndVolumeTrendMovingAverage_Period",
+  "RsiWithHann_Period"
+]
